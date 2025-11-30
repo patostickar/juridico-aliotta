@@ -123,30 +123,34 @@
   /* Servicios */
   .service-card {
       background: white;
-      padding: 40px 30px;
-      transition: transform 0.3s;
-      border: 1px solid #eee;
+      padding: 30px 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       height: 100%;
+      text-align: left;
+      align-items: flex-start;
   }
 
   .service-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   }
 
   .service-icon {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: var(--accent-color);
       margin-bottom: 20px;
+      flex-shrink: 0;
   }
-  
+
   /* Metodología */
   .step-card {
       background-color: white;
       padding: 30px;
       border: 1px solid #eee;
       border-top: 5px solid var(--accent-color);
-      /* Línea dorada superior */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       height: 100%;
       text-align: center;
