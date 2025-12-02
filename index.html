@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="stat-box"  data-aos="flip-left" data-aos-delay="100" data-aos-once="true">
+                            <div class="stat-box" data-aos="flip-left" data-aos-delay="100" data-aos-once="true">
                                 <div class="stat-number">15</div>
                                 <div>Años como Codefensora del Tribunal de Familia</div>
                             </div>
@@ -201,54 +201,70 @@
         </div>
     </section>
 
-    <section id="testimonials" style="background-color: var(--light-bg);">
+    <section id="testimonios" class="bg-white">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-title">Confiaron en nosotros</h2>
-                <p class="mb-5 text-muted">{completar texto}</p>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-text">{testimonio}</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <div>
-                                    <h6 class="mb-0">{nombre}</h6>
-                                    <small>{tipo de asistencia}</small>
+
+            <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-box">
+                                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                    <p class="testimonial-text">"Excelente atención profesional. Tramitaron mi divorcio
+                                        de manera rápida y sin conflictos innecesarios. Muy claros explicando el nuevo
+                                        código."</p>
+                                    <h5 class="client-name">Marcelo D.</h5>
+                                    <span class="client-case">Divorcio Express</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-text">{testimonio}</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <div>
-                                    <h6 class="mb-0">{nombre}</h6>
-                                    <small>{tipo de asistencia}</small>
+
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-box">
+                                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                    <p class="testimonial-text">"Pudimos resolver la sucesión de mi padre con total
+                                        transparencia. Nos asesoraron sobre la partición de bienes de forma excelente."
+                                    </p>
+                                    <h5 class="client-name">Claudia S.</h5>
+                                    <span class="client-case">Sucesiones</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-text">{testimonio}</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <div>
-                                    <h6 class="mb-0">{nombre}</h6>
-                                    <small>{tipo de asistencia}</small>
+
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="testimonial-box">
+                                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                    <p class="testimonial-text">"Tuve un accidente de tránsito y el estudio se encargó
+                                        de todo el reclamo a la aseguradora logrando una indemnización justa."</p>
+                                    <h5 class="client-name">Roberto F.</h5>
+                                    <span class="client-case">Accidentes y Daños</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                </button>
             </div>
-        </div>
         </div>
     </section>
 
