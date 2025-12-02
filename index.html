@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio Jurídico Stella Aliotta | Derecho de Familia</title>
+    <title>Estudio Jurídico Stella Aliotta & Asoc. | Derecho Civil y de Familia</title>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
@@ -22,16 +22,17 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i class="fas fa-balance-scale me-2"></i> ESTUDIO JURÍDICO<br>
-                <span style="font-size: 0.9rem; letter-spacing: 2px; color: var(--text-dark);">STELLA ALIOTTA</span>
+                <span style="font-size: 0.9rem; letter-spacing: 2px; color: var(--text-dark);">STELLA ALIOTTA &
+                    ASOC.</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#trayectoria">La Dra. Aliotta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trayectoria">Nuestro Equipo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicios">Áreas de Práctica</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#enfoque">Etapas</a></li>
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-gold" href="#contacto">Solicitar Consulta</a>
                     </li>
@@ -57,8 +58,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
-                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                        alt="Oficina de Abogacía" class="img-fluid rounded shadow">
+                    <img src="img/team.png" alt="Oficina de Abogacía" class="img-fluid rounded shadow">
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <h2 class="section-title text-start">Trayectoria y Excelencia</h2>
@@ -95,7 +95,7 @@
 
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="service-card text-center">
+                    <div class="service-card text-center" data-bs-toggle="modal" data-bs-target="#modalDivorcios">
                         <i class="fas fa-users-slash service-icon"></i>
                         <h4>Divorcios y Separaciones</h4>
                         <p class="text-muted">Divorcios unilaterales y de mutuo acuerdo. División de bienes y
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card text-center">
+                    <div class="service-card text-center" data-bs-toggle="modal" data-bs-target="#modalAlimentos">
                         <i class="fas fa-child service-icon"></i>
                         <h4>Cuotas Alimentarias</h4>
                         <p class="text-muted">Reclamos, aumentos y ejecución de cuotas alimentarias para garantizar el
@@ -111,7 +111,8 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card text-center">
+                    <div class="service-card text-center" data-bs-toggle="modal"
+                        data-bs-target="#modalComunicacionLabel">
                         <i class="fas fa-hand-holding-heart service-icon"></i>
                         <h4>Régimen de Comunicación</h4>
                         <p class="text-muted">Establecimiento de planes de parentalidad y regímenes de visita justos y
@@ -119,7 +120,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card text-center">
+                    <div class="service-card text-center" data-bs-toggle="modal" data-bs-target="#modalAdopciones">
                         <i class="fas fa-home service-icon"></i>
                         <h4>Adopciones y Tutelas</h4>
                         <p class="text-muted">Asesoramiento integral en procesos de adopción, guardas y tutelas legales.
@@ -127,7 +128,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card text-center">
+                    <div class="service-card text-center" data-bs-toggle="modal" data-bs-target="#modalViolencia">
                         <i class="fas fa-gavel service-icon"></i>
                         <h4>Violencia Familiar</h4>
                         <p class="text-muted">Medidas de protección urgentes y asesoramiento contencioso en situaciones
@@ -135,7 +136,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service-card text-center">
+                    <div class="service-card text-center" data-bs-toggle="modal" data-bs-target="#modalFiliacion">
                         <i class="fas fa-file-signature service-icon"></i>
                         <h4>Filiación y Sucesiones</h4>
                         <p class="text-muted">Juicios de filiación, reconocimiento de hijos y trámites sucesorios
@@ -202,7 +203,7 @@
         </div>
     </section>
 
-    <section id="contacto"  style="background-color: var(--light-bg);">
+    <section id="contacto">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 mb-5">
@@ -295,6 +296,163 @@
     <a href="https://wa.me/5492634000000" class="whatsapp-float whatsapp-bg" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <div class="modal fade" id="modalDivorcios" tabindex="-1" aria-labelledby="modalDivorciosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDivorciosLabel">Divorcios y Separaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Manejamos todo tipo de procesos de **divorcio**, buscando siempre la vía más rápida y menos
+                        conflictiva para la familia. Nuestra asistencia incluye:</p>
+                    <ul>
+                        <li>Divorcio por presentación conjunta (mutuo acuerdo).</li>
+                        <li>Divorcio unilateral.</li>
+                        <li>Liquidación y división de la sociedad conyugal/comunidad de bienes.</li>
+                        <li>Establecimiento y modificación de compensaciones económicas.</li>
+                    </ul>
+                    <p class="text-muted small">Nuestro enfoque prioriza la solución dialogada para proteger el
+                        patrimonio y la estabilidad emocional de todos los involucrados.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAlimentos" tabindex="-1" aria-labelledby="modalAlimentosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAlimentosLabel">Cuotas Alimentarias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Garantizamos el cumplimiento de la obligación alimentaria de los hijos y de otros parientes con
+                        derecho. Nuestros servicios incluyen:</p>
+                    <ul>
+                        <li>Demanda de fijación de cuota alimentaria inicial.</li>
+                        <li>Juicios de aumento, disminución o cese de la cuota.</li>
+                        <li>Ejecución de cuotas alimentarias adeudadas y medidas cautelares.</li>
+                        <li>Alimentos provisorios y definitivos.</li>
+                    </ul>
+                    <p class="text-muted small">La experiencia en el Tribunal de Familia nos permite actuar con la
+                        máxima celeridad para proteger el bienestar infantil.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalComunicacion" tabindex="-1" aria-labelledby="modalComunicacionLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalComunicacionLabel">Régimen de Comunicación y Cuidado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ayudamos a los padres a establecer un plan de parentalidad funcional que respete el interés
+                        superior del menor:</p>
+                    <ul>
+                        <li>Fijación o modificación del régimen de comunicación (visitas).</li>
+                        <li>Ejercicios de cuidado personal (tenencia) exclusivo o compartido.</li>
+                        <li>Acuerdos de responsabilidad parental.</li>
+                        <li>Intervención en casos de impedimento de contacto.</li>
+                    </ul>
+                    <p class="text-muted small">Buscamos soluciones que fomenten una relación sana y estable entre los
+                        hijos y ambos padres.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdopciones" tabindex="-1" aria-labelledby="modalAdopcionesLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAdopcionesLabel">Adopciones y Tutelas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Asesoramiento especializado y acompañamiento integral en los procesos para la constitución de
+                        nuevos vínculos familiares:</p>
+                    <ul>
+                        <li>Tramitación de la guarda con fines de adopción.</li>
+                        <li>Juicios de adopción (simple y plena).</li>
+                        <li>Constitución y ejercicio de la tutela y curatela.</li>
+                        <li>Asesoramiento sobre el Registro de Postulantes a Guarda con fines Adoptivos.</li>
+                    </ul>
+                    <p class="text-muted small">Un proceso delicado que requiere de la máxima rigurosidad y sensibilidad
+                        legal.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalViolencia" tabindex="-1" aria-labelledby="modalViolenciaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalViolenciaLabel">Violencia Familiar y de Género</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ofrecemos representación legal inmediata para víctimas de violencia intrafamiliar, asegurando su
+                        protección. Servicios clave:</p>
+                    <ul>
+                        <li>Solicitud de medidas de protección urgentes (orden de restricción, exclusión del hogar).
+                        </li>
+                        <li>Asesoramiento y representación en denuncias ante el Tribunal de Familia.</li>
+                        <li>Asistencia legal en causas penales derivadas de violencia.</li>
+                    </ul>
+                    <p class="text-danger small">Si se encuentra en una situación de riesgo, contáctenos de inmediato
+                        para activar las medidas judiciales de protección.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Solicitar Ayuda Urgente</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFiliacion" tabindex="-1" aria-labelledby="modalFiliacionLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFiliacionLabel">Filiación y Trámites Sucesorios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Representación legal en asuntos de identidad y patrimonio post-mortem en el ámbito familiar:</p>
+                    <ul>
+                        <li>Juicios de filiación (impugnación y reconocimiento de paternidad).</li>
+                        <li>Trámites sucesorios y declaratoria de herederos.</li>
+                        <li>Partición de herencia y colación de bienes.</li>
+                        <li>Petición de herencia.</li>
+                    </ul>
+                    <p class="text-muted small">Combinamos la experiencia en derecho de familia y sucesorio para una
+                        gestión eficiente del patrimonio familiar.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
