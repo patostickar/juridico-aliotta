@@ -9,13 +9,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Icons & Animation -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
     <!-- Custom CSS -->
@@ -23,22 +25,6 @@
 </head>
 
 <body>
-
-    <!-- Top Bar (Professional Touch) -->
-    <div class="top-bar d-none d-lg-block">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="top-info">
-                <span><i class="fas fa-map-marker-alt me-2"></i>San Martín, Mendoza</span>
-                <span class="mx-3">|</span>
-                <span><i class="far fa-clock me-2"></i>Lun - Vie: 9:00 - 18:00</span>
-            </div>
-            <div class="top-social">
-                <a href="mailto:contacto@estudioaliotta.com.ar" class="text-white text-decoration-none">
-                    <i class="fas fa-envelope me-2"></i> contacto@estudioaliotta.com.ar
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -73,15 +59,25 @@
     <!-- Hero Section -->
     <header id="inicio" class="hero">
         <div class="hero-overlay"></div>
-        <div class="container position-relative z-2">
+        <div class="container hero-container position-relative z-2">
             <div class="row">
                 <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
                     <span class="badge-hero mb-3">Más de 40 años de experiencia</span>
-                    <h1 class="display-4">Defendemos lo más importante: <span class="text-gold fst-italic">Su Familia.</span></h1>
-                    <p class="lead mt-3 mb-4">Estudio Jurídico especializado en Derecho Civil y de Familia en Mendoza. Combinamos rigor técnico con la empatía humana necesaria para resolver conflictos delicados.</p>
+                    <h1 class="display-4">Defendemos lo más importante: <span class="text-gold fst-italic">A vos y tu
+                            Familia</span></h1>
+                    <p class="lead mt-3 mb-4">Estudio Jurídico especializado en <span style="font-weight: 600;">Derecho
+                            Civil y de Familia en Mendoza</span>. Combinamos rigor técnico con la empatía humana
+                        necesaria para resolver conflictos delicados.</p>
                     <div class="d-flex gap-3 flex-wrap">
+                        <div class="d-flex align-items-center my-4 p-3 rounded-3"
+                            style="background: rgba(255,255,255,0.1); border-left: 4px solid var(--gold); backdrop-filter: blur(5px);">
+                            <i class="fas fa-university text-gold fs-2 me-3"></i>
+                            <div>
+                                <h6 class="text-white mb-0 fw-bold">Ex Co-Defensora Oficial de Familia y Civil en San Martín</h6>
+                                <p class="text-white-50 mb-0 small">Conocimiento interno de los criterios del Tribunal</p>
+                            </div>
+                        </div>
                         <a href="#contacto" class="btn btn-gold btn-lg">Solicitar Asesoramiento</a>
-                        <a href="#servicios" class="btn btn-outline-light btn-lg">Ver Servicios</a>
                     </div>
                 </div>
             </div>
@@ -94,19 +90,28 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="image-stack">
-                        <img src="img/team.png" alt="Abogada en escritorio" class="img-fluid rounded-4 shadow-lg main-img">
-                        <div class="experience-badge floating-anim">
-                            <span class="years">40+</span>
-                            <span class="text">Años de<br>Trayectoria</span>
+                        <img src="img/team.png" alt="Abogada en escritorio"
+                            class="img-fluid rounded-4 shadow-lg main-img">
+                        <div class="experience-badge">
+                            <span class="years">15</span>
+                            <span class="text">Años co-defensora<br>de familia</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <h6 class="text-gold text-uppercase letter-spacing-2 fw-bold mb-2">Sobre Nosotros</h6>
-                    <h2 class="section-heading mb-4">Excelencia Legal y<br>Calidad Humana</h2>
-                    <p class="text-secondary mb-4">Liderado por la Dra. Stella Aliotta, nuestro estudio se distingue no solo por la estrategia jurídica, sino por la contención emocional que brindamos en cada etapa del proceso.</p>
-                    <p class="text-secondary mb-4">Entendemos que detrás de cada expediente hay una historia de vida. Por ello, combinamos nuestra experiencia como ex-codefensora del Tribunal de Familia con un enfoque moderno de resolución de conflictos.</p>
-                    
+                    <h2 class="section-heading mb-4">Excelencia Legal y Calidad Humana</h2>
+                    <p class="text-secondary mb-4">Liderado por la Dra. Stella Aliotta, nuestro estudio se distingue no
+                        solo por la estrategia jurídica, sino por la contención emocional que brindamos en cada etapa
+                        del proceso.</p>
+                    <p class="text-secondary mb-4">Entendemos que detrás de cada expediente hay una historia de vida.
+                        Por ello, combinamos su experiencia como <strong>ex-codefensora del Tribunal de Familia</strong>
+                        con un
+                        enfoque moderno de resolución de conflictos.</p>
+                    <p class="text-secondary mb-4"> La Dra. Aliotta entiende <strong>cómo razonan los jueces</strong>,
+                        qué criterios priorizan en sus sentencias y cómo agilizar los tiempos burocráticos que suelen
+                        demorar los procesos.</p>
+
                     <div class="row g-4 mt-2">
                         <div class="col-sm-6">
                             <div class="feature-item d-flex align-items-center">
@@ -144,7 +149,8 @@
             <div class="text-center mb-5 mw-800 mx-auto" data-aos="fade-up">
                 <h6 class="text-gold text-uppercase letter-spacing-2 fw-bold">Áreas de Práctica</h6>
                 <h2 class="section-heading">Soluciones Legales Integrales</h2>
-                <p class="text-muted mt-3">Nos especializamos en las ramas más sensibles del derecho para brindar respuestas rápidas y efectivas.</p>
+                <p class="text-muted mt-3">Nos especializamos en las ramas más sensibles del derecho para brindar
+                    respuestas rápidas y efectivas.</p>
             </div>
 
             <div class="row g-4">
@@ -152,8 +158,8 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card" data-bs-toggle="modal" data-bs-target="#modalDivorcios">
                         <div class="icon-box">
-                            <i class="fas fa-user-group-simple"></i> <!-- Changed icon class for variation, ensure fontawesome updated or use available -->
-                            <i class="fas fa-rings-wedding"></i> 
+                            <i class="fa-solid fa-users-slash service-icon"></i>
+                            <!-- Changed icon class for variation, ensure fontawesome updated or use available -->
                         </div>
                         <h4>Divorcios</h4>
                         <p>Divorcios unilaterales y de mutuo acuerdo. División de bienes y compensaciones.</p>
@@ -164,7 +170,7 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card" data-bs-toggle="modal" data-bs-target="#modalAlimentos">
                         <div class="icon-box">
-                            <i class="fas fa-bowl-food"></i>
+                            <i class="fas fa-child service-icon"></i>
                         </div>
                         <h4>Alimentos</h4>
                         <p>Reclamos, aumentos y ejecución de cuotas para el bienestar de los hijos.</p>
@@ -175,7 +181,7 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card" data-bs-toggle="modal" data-bs-target="#modalComunicacion">
                         <div class="icon-box">
-                            <i class="fas fa-children"></i>
+                            <i class="fas fa-hand-holding-heart service-icon"></i>
                         </div>
                         <h4>Régimen de Visitas</h4>
                         <p>Planes de parentalidad y cuidado personal para mantener vínculos sanos.</p>
@@ -186,7 +192,7 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card" data-bs-toggle="modal" data-bs-target="#modalAdopciones">
                         <div class="icon-box">
-                            <i class="fas fa-house-chimney-heart"></i>
+                            <i class="fa-solid fa-house-chimney-user"></i>
                         </div>
                         <h4>Adopciones</h4>
                         <p>Asesoramiento en procesos de adopción, guardas y tutelas legales.</p>
@@ -197,7 +203,7 @@
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-card" data-bs-toggle="modal" data-bs-target="#modalViolencia">
                         <div class="icon-box warning">
-                            <i class="fas fa-shield-halved"></i>
+                            <i class="fa-solid fa-person-burst"></i>
                         </div>
                         <h4>Violencia Familiar</h4>
                         <p>Medidas de protección urgentes y exclusión del hogar ante situaciones de riesgo.</p>
@@ -226,7 +232,8 @@
                 <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
                     <h6 class="text-gold text-uppercase letter-spacing-2 fw-bold">Cómo Trabajamos</h6>
                     <h2 class="section-heading mb-4">Un Proceso Transparente</h2>
-                    <p class="text-secondary">Sabemos que el sistema judicial puede ser intimidante. Nuestro objetivo es simplificar el camino, manteniéndolo informado en cada paso.</p>
+                    <p class="text-secondary">Sabemos que el sistema judicial puede ser intimidante. Nuestro objetivo es
+                        simplificar el camino, manteniéndte al corriente en cada paso.</p>
                     <a href="#contacto" class="btn btn-primary-custom mt-3">Iniciar Consulta</a>
                 </div>
                 <div class="col-lg-7">
@@ -235,7 +242,7 @@
                             <div class="step-number">01</div>
                             <div class="step-content">
                                 <h5>Diagnóstico</h5>
-                                <p>Evaluamos su caso en profundidad para definir expectativas reales.</p>
+                                <p>Evaluamos tu caso en profundidad para definir expectativas reales.</p>
                             </div>
                         </div>
                         <div class="step-row" data-aos="fade-up" data-aos-delay="100">
@@ -249,7 +256,7 @@
                             <div class="step-number">03</div>
                             <div class="step-content">
                                 <h5>Acción Judicial</h5>
-                                <p>Si el acuerdo no es posible, litigamos con firmeza defendiendo sus derechos.</p>
+                                <p>Si el acuerdo no es posible, litigamos con firmeza defendiendo tus derechos. Diseñamos una estrategia legal alineada con los <strong>criterios actuales de los magistrados</strong>.</p>
                             </div>
                         </div>
                         <div class="step-row" data-aos="fade-up" data-aos-delay="300">
@@ -279,7 +286,7 @@
 
             <div class="multi-carousel-container" id="multiCarousel">
                 <div class="multi-carousel-inner" id="carouselInner">
-                    
+
                     <!-- Original Items (Classes updated for new styling) -->
                     <div class="multi-carousel-item">
                         <div class="review-card">
@@ -287,7 +294,8 @@
                                 <div class="stars">★★★★★</div>
                                 <i class="fas fa-quote-right quote-mark"></i>
                             </div>
-                            <p class="review-text">"Excelente atención profesional. Tramitaron mi divorcio de manera rápida y sin conflictos innecesarios. Muy claros explicando."</p>
+                            <p class="review-text">"Excelente atención profesional. Tramitaron mi divorcio de manera
+                                rápida y sin conflictos innecesarios. Muy claros explicando."</p>
                             <div class="review-author">
                                 <strong>Marcelo D.</strong>
                                 <span>Divorcio Express</span>
@@ -301,10 +309,10 @@
                                 <div class="stars">★★★★★</div>
                                 <i class="fas fa-quote-right quote-mark"></i>
                             </div>
-                            <p class="review-text">"Pudimos resolver la sucesión de mi padre con total transparencia. Nos asesoraron sobre la partición de bienes excelentemente."</p>
+                            <p class="review-text">"La Dra. me consiguió un turno para tramitar el concubinato sin tener que esperar. Está muy bien conectada."</p>
                             <div class="review-author">
-                                <strong>Claudia S.</strong>
-                                <span>Sucesiones</span>
+                                <strong>Patricio S.</strong>
+                                <span>Acomodos</span>
                             </div>
                         </div>
                     </div>
@@ -315,21 +323,23 @@
                                 <div class="stars">★★★★★</div>
                                 <i class="fas fa-quote-right quote-mark"></i>
                             </div>
-                            <p class="review-text">"Tuve un accidente de tránsito y el estudio se encargó de todo el reclamo a la aseguradora logrando una indemnización justa."</p>
+                            <p class="review-text">"Tuve un accidente de tránsito y el estudio se encargó de todo el
+                                reclamo a la aseguradora logrando una indemnización justa."</p>
                             <div class="review-author">
                                 <strong>Roberto F.</strong>
                                 <span>Daños y Perjuicios</span>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="multi-carousel-item">
                         <div class="review-card">
                             <div class="review-header">
                                 <div class="stars">★★★★★</div>
                                 <i class="fas fa-quote-right quote-mark"></i>
                             </div>
-                            <p class="review-text">"La Dra. Aliotta nos ayudó con el régimen de visitas. Fue un proceso difícil pero logramos un acuerdo pensando en los chicos."</p>
+                            <p class="review-text">"La Dra. Aliotta nos ayudó con el régimen de visitas. Fue un proceso
+                                difícil pero logramos un acuerdo pensando en los chicos."</p>
                             <div class="review-author">
                                 <strong>Esteban G.</strong>
                                 <span>Régimen de Comunicación</span>
@@ -343,7 +353,8 @@
                                 <div class="stars">★★★★★</div>
                                 <i class="fas fa-quote-right quote-mark"></i>
                             </div>
-                            <p class="review-text">"Muy agradecida por el trato humano en un momento tan delicado como fue mi separación. Me sentí contenida."</p>
+                            <p class="review-text">"Muy agradecida por el trato humano en un momento tan delicado como
+                                fue mi separación. Me sentí contenida."</p>
                             <div class="review-author">
                                 <strong>Mariana L.</strong>
                                 <span>Divorcio</span>
@@ -365,8 +376,9 @@
             <div class="row g-5">
                 <div class="col-lg-5">
                     <h6 class="text-gold text-uppercase letter-spacing-2 fw-bold">Contacto</h6>
-                    <h2 class="section-heading mb-4">Hablemos de su caso</h2>
-                    <p class="text-secondary mb-5">La primera consulta nos servirá para orientarlo. Puede escribirnos por formulario o directamente a WhatsApp.</p>
+                    <h2 class="section-heading mb-4">Hablemos de tu caso</h2>
+                    <p class="text-secondary mb-5">La primera consulta nos servirá para orientarte. Podés escribirnos
+                        por formulario o directamente a WhatsApp.</p>
 
                     <div class="contact-info-card">
                         <div class="d-flex mb-4">
@@ -398,14 +410,15 @@
                         </div>
                     </div>
 
-                    <a href="https://wa.me/5492634000000" class="btn btn-success w-100 mt-3 py-3 rounded-pill shadow-sm">
+                    <a href="https://wa.me/5492634000000"
+                        class="btn btn-success w-100 mt-3 py-3 rounded-pill shadow-sm">
                         <i class="fab fa-whatsapp me-2 fa-lg"></i> Enviar Mensaje por WhatsApp
                     </a>
                 </div>
 
                 <div class="col-lg-7">
                     <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4">
-                        <h4 class="mb-4 font-serif">Formulario de Consulta</h4>
+                        <h4 class="mb-4 font-serif">¿Cómo podemos ayudarte?</h4>
                         <form>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -424,13 +437,13 @@
                             <div class="mb-3">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="emailInput" placeholder="Email">
-                                    <label for="emailInput">Correo Electrónico</label>
+                                    <label for="emailInput">E-mail</label>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <div class="form-floating">
                                     <select class="form-select" id="motiveSelect">
-                                        <option selected>Seleccione una opción</option>
+                                        <option selected disabled>Seleccione una opción</option>
                                         <option value="1">Divorcio / Separación</option>
                                         <option value="2">Alimentos</option>
                                         <option value="3">Sucesiones</option>
@@ -441,11 +454,13 @@
                             </div>
                             <div class="mb-4">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Mensaje" id="msgInput" style="height: 120px"></textarea>
+                                    <textarea class="form-control" placeholder="Mensaje" id="msgInput"
+                                        style="height: 120px"></textarea>
                                     <label for="msgInput">Describa brevemente su situación</label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary-custom w-100 py-3 rounded-3">Enviar Consulta</button>
+                            <button type="submit" class="btn btn-primary-custom w-100 py-3 rounded-3">Enviar
+                                Consulta</button>
                         </form>
                     </div>
                 </div>
@@ -462,7 +477,7 @@
                     <p class="text-white-50 small mb-0">Derecho de Familia y Sucesiones</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="text-white-50 small mb-0">&copy; 2024 Todos los derechos reservados.</p>
+                    <p class="text-white-50 small mb-0">&copy; 2026 Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
@@ -474,33 +489,163 @@
         <span class="tooltip-text">¿Necesita ayuda?</span>
     </a>
 
-    <!-- Modals (Simplified Structure for Modern Look) -->
-    <!-- Note: Keeping the IDs same to match JS triggers -->
-    <div class="modal fade" id="modalDivorcios" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalDivorcios" tabindex="-1" aria-labelledby="modalDivorciosLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header bg-primary-dark text-white border-0">
-                    <h5 class="modal-title font-serif">Divorcios y Separaciones</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDivorciosLabel">Divorcios y Separaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
-                    <p class="mb-3">Manejamos procesos de divorcio buscando la vía más rápida y menos conflictiva:</p>
-                    <ul class="custom-list">
-                        <li>Divorcio por presentación conjunta.</li>
+                <div class="modal-body">
+                    <p>Manejamos todo tipo de procesos de **divorcio**, buscando siempre la vía más rápida y menos
+                        conflictiva para la familia. Nuestra asistencia incluye:</p>
+                    <ul>
+                        <li>Divorcio por presentación conjunta (mutuo acuerdo).</li>
                         <li>Divorcio unilateral.</li>
-                        <li>Liquidación de sociedad conyugal.</li>
-                        <li>Compensaciones económicas.</li>
+                        <li>Liquidación y división de la sociedad conyugal/comunidad de bienes.</li>
+                        <li>Establecimiento y modificación de compensaciones económicas.</li>
                     </ul>
+                    <p class="text-muted small">Nuestro enfoque prioriza la solución dialogada para proteger el
+                        patrimonio y la estabilidad emocional de todos los involucrados.</p>
                 </div>
-                <div class="modal-footer border-0 pt-0">
-                    <a href="#contacto" class="btn btn-gold w-100" data-bs-dismiss="modal">Solicitar Turno</a>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- (Other modals would follow same pattern, keeping IDs unique) -->
-    <!-- For brevity in this redesign, ensure all other modals from original HTML are kept but classes updated to 'border-0 shadow-lg', 'bg-primary-dark text-white' for header, etc. -->
-    
+
+        <div class="modal fade" id="modalAlimentos" tabindex="-1" aria-labelledby="modalAlimentosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAlimentosLabel">Cuotas Alimentarias</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Garantizamos el cumplimiento de la obligación alimentaria de los hijos y de otros parientes con
+                        derecho. Nuestros servicios incluyen:</p>
+                    <ul>
+                        <li>Demanda de fijación de cuota alimentaria inicial.</li>
+                        <li>Juicios de aumento, disminución o cese de la cuota.</li>
+                        <li>Ejecución de cuotas alimentarias adeudadas y medidas cautelares.</li>
+                        <li>Alimentos provisorios y definitivos.</li>
+                    </ul>
+                    <p class="text-muted small">La experiencia en el Tribunal de Familia nos permite actuar con la
+                        máxima celeridad para proteger el bienestar infantil.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalComunicacion" tabindex="-1" aria-labelledby="modalComunicacionLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalComunicacionLabel">Régimen de Comunicación y Cuidado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ayudamos a los padres a establecer un plan de parentalidad funcional que respete el interés
+                        superior del menor:</p>
+                    <ul>
+                        <li>Fijación o modificación del régimen de comunicación (visitas).</li>
+                        <li>Ejercicios de cuidado personal (tenencia) exclusivo o compartido.</li>
+                        <li>Acuerdos de responsabilidad parental.</li>
+                        <li>Intervención en casos de impedimento de contacto.</li>
+                    </ul>
+                    <p class="text-muted small">Buscamos soluciones que fomenten una relación sana y estable entre los
+                        hijos y ambos padres.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdopciones" tabindex="-1" aria-labelledby="modalAdopcionesLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAdopcionesLabel">Adopciones y Tutelas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Asesoramiento especializado y acompañamiento integral en los procesos para la constitución de
+                        nuevos vínculos familiares:</p>
+                    <ul>
+                        <li>Tramitación de la guarda con fines de adopción.</li>
+                        <li>Juicios de adopción (simple y plena).</li>
+                        <li>Constitución y ejercicio de la tutela y curatela.</li>
+                        <li>Asesoramiento sobre el Registro de Postulantes a Guarda con fines Adoptivos.</li>
+                    </ul>
+                    <p class="text-muted small">Un proceso delicado que requiere de la máxima rigurosidad y sensibilidad
+                        legal.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalViolencia" tabindex="-1" aria-labelledby="modalViolenciaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalViolenciaLabel">Violencia Familiar y de Género</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ofrecemos representación legal inmediata para víctimas de violencia intrafamiliar, asegurando su
+                        protección. Servicios clave:</p>
+                    <ul>
+                        <li>Solicitud de medidas de protección urgentes (orden de restricción, exclusión del hogar).
+                        </li>
+                        <li>Asesoramiento y representación en denuncias ante el Tribunal de Familia.</li>
+                        <li>Asistencia legal en causas penales derivadas de violencia.</li>
+                    </ul>
+                    <p class="text-danger small">Si se encuentra en una situación de riesgo, contáctenos de inmediato
+                        para activar las medidas judiciales de protección.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Solicitar Ayuda Urgente</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalFiliacion" tabindex="-1" aria-labelledby="modalFiliacionLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFiliacionLabel">Filiación y Trámites Sucesorios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Representación legal en asuntos de identidad y patrimonio post-mortem en el ámbito familiar:</p>
+                    <ul>
+                        <li>Juicios de filiación (impugnación y reconocimiento de paternidad).</li>
+                        <li>Trámites sucesorios y declaratoria de herederos.</li>
+                        <li>Partición de herencia y colación de bienes.</li>
+                        <li>Petición de herencia.</li>
+                    </ul>
+                    <p class="text-muted small">Combinamos la experiencia en derecho de familia y sucesorio para una
+                        gestión eficiente del patrimonio familiar.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Consultar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -512,7 +657,7 @@
         });
 
         // Navbar Scroll Effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 50) {
                 document.querySelector('.navbar').classList.add('scrolled');
             } else {
@@ -520,10 +665,7 @@
             }
         });
     </script>
-    <!-- Include your existing Carousel Script Here (It is compatible with this HTML) -->
     <script>
-        // Paste the exact carousel JS logic from the original file here
-        // No changes needed to the JS logic, as IDs match.
         document.addEventListener("DOMContentLoaded", function () {
             const carousel = document.getElementById("multiCarousel");
             const carouselInner = document.getElementById("carouselInner");
@@ -554,7 +696,7 @@
             let position = itemsPerSlide;
             let isAnimating = false;
             function updateCarouselPosition(animate = true) {
-                if (animate) { carouselInner.style.transition = "transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)"; } 
+                if (animate) { carouselInner.style.transition = "transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)"; }
                 else { carouselInner.style.transition = "none"; }
                 const translateX = (position * -100) / itemsPerSlide;
                 carouselInner.style.transform = `translateX(${translateX}%)`;
@@ -628,4 +770,5 @@
         });
     </script>
 </body>
+
 </html>
