@@ -1,3 +1,7 @@
+html {
+    overflow-x: hidden;
+}
+
 :root {
     /* New Color Palette: Deeper Navy, Metallic Gold, Clean Slate */
     --primary-dark: #0a1f35;
