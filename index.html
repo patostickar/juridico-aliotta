@@ -122,7 +122,9 @@
                         procesos.
                     </p>
                     <p class="text-secondary mb-4">
-                        Además, contamos con un experimentado equipo compuesto por <strong>profesionales especializados</strong> en Derecho de Familia, Derecho Civil, Derecho Laboral y Derecho Penal.
+                        Además, contamos con un experimentado equipo compuesto por <strong>profesionales
+                            especializados</strong> en Derecho de Familia, Derecho Civil, Derecho Laboral y Derecho
+                        Penal.
                     </p>
                     <div class="row g-4 mt-2">
                         <div class="col-sm-6">
@@ -435,8 +437,7 @@
                         </div>
                     </div>
 
-                    <a href="https://wa.me/542613842742"
-                        class="btn btn-success w-100 mt-3 py-3 rounded-pill shadow-sm">
+                    <a href="https://wa.me/542613842742" class="btn btn-success w-100 mt-3 py-3 rounded-pill shadow-sm">
                         <i class="fab fa-whatsapp me-2 fa-lg"></i> Enviar Mensaje por WhatsApp
                     </a>
                 </div>
@@ -444,52 +445,82 @@
                 <div class="col-lg-7">
                     <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4">
                         <h4 class="mb-4 font-serif">¿Cómo podemos ayudarte?</h4>
-                        <form>
+                        <div id="formSuccessAlert" class="alert alert-success d-none mb-4" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <strong>¡Consulta enviada!</strong> Leeremos atentamente tu mensaje y nos pondremos en
+                            contacto pronto.
+                        </div>
+                        <div id="formErrorAlert" class="alert alert-danger d-none mb-4" role="alert">
+                            <i class="fas fa-exclamation-circle me-2"></i>
+                            <span id="formErrorMessage">Por favor complete todos los campos correctamente.</span>
+                        </div>
+                        <form id="contactForm">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="nameInput" placeholder="Nombre">
-                                        <label for="nameInput">Nombre Completo</label>
+                                        <input type="text" class="form-control" id="nameInput" placeholder="Nombre"
+                                            required minlength="3" maxlength="100">
+                                        <label for="nameInput">Nombre Completo *</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingrese su nombre completo (mínimo 3 caracteres)
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phoneInput" placeholder="Teléfono">
-                                        <label for="phoneInput">Teléfono</label>
+                                        <input type="tel" class="form-control" id="phoneInput" placeholder="Teléfono"
+                                            required>
+                                        <label for="phoneInput">Teléfono *</label>
+                                        <div class="invalid-feedback">
+                                            Por favor ingrese un número de teléfono
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="emailInput" placeholder="Email">
-                                    <label for="emailInput">E-mail</label>
+                                    <input type="email" class="form-control" id="emailInput" placeholder="Email"
+                                        required>
+                                    <label for="emailInput">E-mail *</label>
+                                    <div class="invalid-feedback">
+                                        Por favor ingrese un correo electrónico válido
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <div class="form-floating">
-                                    <select class="form-select" id="motiveSelect">
-                                        <option selected disabled>Seleccione una opción</option>
+                                    <select class="form-select" id="motiveSelect" required>
+                                        <option value="" selected disabled>Seleccione una opción</option>
                                         <option value="1">Divorcios</option>
                                         <option value="2">Alimentos</option>
                                         <option value="3">Régimen de Comunicación y Cuidado Personal</option>
                                         <option value="4">Adopciones</option>
                                         <option value="5">Violencia Familiar</option>
-                                        <option value="6">Adopciones</option>
-                                        <option value="7">Adopciones</option>
-
+                                        <option value="6">Juicios de filiación. Cambios de nombre. Impugnación.</option>
+                                        <option value="7">Sucesiones y Filiación</option>
+                                        <option value="8">Otro</option>
                                     </select>
-                                    <label for="motiveSelect">Motivo de Consulta</label>
+                                    <label for="motiveSelect">Motivo de Consulta *</label>
+                                    <div class="invalid-feedback">
+                                        Por favor seleccione un motivo de consulta
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Mensaje" id="msgInput"
-                                        style="height: 120px"></textarea>
-                                    <label for="msgInput">Describa brevemente su situación</label>
+                                        style="height: 120px" required minlength="10" maxlength="1000"></textarea>
+                                    <label for="msgInput">Describa brevemente su situación *</label>
+                                    <div class="invalid-feedback">
+                                        Por favor describa su situación (mínimo 10 caracteres)
+                                    </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary-custom w-100 py-3 rounded-3">Enviar
-                                Consulta</button>
+                            <button type="submit" class="btn btn-primary-custom w-100 py-3 rounded-3" id="submitBtn">
+                                <span class="submit-text">Enviar Consulta</span>
+                                <span class="spinner-border spinner-border-sm d-none" role="status"
+                                    aria-hidden="true"></span>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -656,8 +687,9 @@
                         <li>Asesoramiento y representación en denuncias ante el Tribunal de Familia.</li>
                         <li>Asistencia legal en causas penales derivadas de violencia.</li>
                     </ul>
-                    <p class="text-danger small"><strong>Si se encuentra en una situación de riesgo, contáctenos de inmediato
-                        para activar las medidas judiciales de protección.</strong></p>
+                    <p class="text-danger small"><strong>Si se encuentra en una situación de riesgo, contáctenos de
+                            inmediato
+                            para activar las medidas judiciales de protección.</strong></p>
                 </div>
                 <div class="modal-footer">
                     <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Solicitar Ayuda Urgente</a>
@@ -670,7 +702,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalFiliacionLabel">Juicios de filiación. Cambios de nombre. Impugnación.</h5>
+                    <h5 class="modal-title" id="modalFiliacionLabel">Juicios de filiación. Cambios de nombre.
+                        Impugnación.</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -748,8 +781,8 @@
         });
 
         // Handle modal buttons with data-bs-dismiss and href
-        document.querySelectorAll('a[data-bs-dismiss="modal"][href^="#"]').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
+        document.querySelectorAll('a[data-bs-dismiss="modal"][href^="#"]').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = this.getAttribute('href');
                 const modal = this.closest('.modal');
@@ -760,7 +793,7 @@
                     }
                 }
                 // Navigate after modal closes
-                setTimeout(function() {
+                setTimeout(function () {
                     const element = document.querySelector(target);
                     if (element) {
                         element.scrollIntoView({ behavior: 'smooth' });
@@ -768,6 +801,122 @@
                 }, 300);
             });
         });
+
+        // Form validation with Bootstrap
+        const contactForm = document.getElementById('contactForm');
+        const formSuccessAlert = document.getElementById('formSuccessAlert');
+        const formErrorAlert = document.getElementById('formErrorAlert');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitText = submitBtn.querySelector('.submit-text');
+        const submitSpinner = submitBtn.querySelector('.spinner-border');
+
+        if (contactForm) {
+            // Real-time validation on input
+            ['nameInput', 'phoneInput', 'emailInput', 'motiveSelect', 'msgInput'].forEach(id => {
+                const field = document.getElementById(id);
+                if (field) {
+                    field.addEventListener('input', function () {
+                        if (this.classList.contains('is-invalid')) {
+                            this.classList.remove('is-invalid');
+                        }
+                        // Hide alerts when user starts typing
+                        formSuccessAlert.classList.add('d-none');
+                        formErrorAlert.classList.add('d-none');
+                    });
+                    field.addEventListener('change', function () {
+                        if (this.classList.contains('is-invalid')) {
+                            this.classList.remove('is-invalid');
+                        }
+                    });
+                }
+            });
+
+            contactForm.addEventListener('submit', function (e) {
+                // HTML5 validation passed
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Hide previous alerts
+                formSuccessAlert.classList.add('d-none');
+                formErrorAlert.classList.add('d-none');
+
+                const name = document.getElementById('nameInput');
+                const phone = document.getElementById('phoneInput');
+                const email = document.getElementById('emailInput');
+                const motive = document.getElementById('motiveSelect');
+                const message = document.getElementById('msgInput');
+
+                let isValid = true;
+
+                // Clear previous validation styles
+                [name, phone, email, motive, message].forEach(field => {
+                    field.classList.remove('is-invalid');
+                });
+
+                // Validate name
+                if (!name.value.trim() || name.value.trim().length < 3) {
+                    name.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                // Validate phone
+                const phonePattern = /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+                if (!phone.value.trim() || !phonePattern.test(phone.value.trim())) {
+                    phone.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                // Validate email
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
+                    email.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                // Validate motive
+                if (!motive.value) {
+                    motive.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                // Validate message
+                if (!message.value.trim() || message.value.trim().length < 10) {
+                    message.classList.add('is-invalid');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.disabled = true;
+                submitText.textContent = 'Enviando...';
+                submitSpinner.classList.remove('d-none');
+
+                // Simulate form submission (replace with actual submission logic)
+                setTimeout(function () {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitText.textContent = 'Enviar Consulta';
+                    submitSpinner.classList.add('d-none');
+
+                    // Show success message
+                    formSuccessAlert.classList.remove('d-none');
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // Clear validation classes
+                    [name, phone, email, motive, message].forEach(field => {
+                        field.classList.remove('is-invalid');
+                    });
+
+                    // Scroll to success message
+                    formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1500);
+            });
+        }
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
