@@ -746,6 +746,28 @@
                 document.querySelector('.navbar').classList.remove('scrolled');
             }
         });
+
+        // Handle modal buttons with data-bs-dismiss and href
+        document.querySelectorAll('a[data-bs-dismiss="modal"][href^="#"]').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = this.getAttribute('href');
+                const modal = this.closest('.modal');
+                if (modal) {
+                    const modalInstance = bootstrap.Modal.getInstance(modal);
+                    if (modalInstance) {
+                        modalInstance.hide();
+                    }
+                }
+                // Navigate after modal closes
+                setTimeout(function() {
+                    const element = document.querySelector(target);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 300);
+            });
+        });
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
