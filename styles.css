@@ -59,16 +59,7 @@ a {
     max-width: 800px;
 }
 
-/* --- Top Bar --- */
-.top-bar {
-    background-color: var(--primary-dark);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.85rem;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* --- Navbar Modernization --- */
+/* --- Navbar --- */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -81,6 +72,12 @@ a {
 .navbar.scrolled {
     padding: 15px 0;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 0;
+    }
 }
 
 .brand-title {
