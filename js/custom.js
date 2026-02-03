@@ -12,3 +12,10 @@ window.addEventListener('scroll', function () {
         document.querySelector('.navbar').classList.remove('scrolled');
     }
 });
+
+// Get Year for Copyright
+document.addEventListener('DOMContentLoaded', function () {
+  let d = new Date();
+  let n = d.getFullYear();
+  document.getElementById('year').innerHTML = n;
+});
