@@ -19,3 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
   let n = d.getFullYear();
   document.getElementById('year').innerHTML = n;
 });
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
+    }
+});
