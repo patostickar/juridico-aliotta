@@ -542,6 +542,10 @@
                                 <strong>¡Consulta enviada!</strong> Leeremos atentamente tu mensaje y nos pondremos en
                                 contacto pronto.
                             </div>
+                            <div id="formErrorAlert" class="alert alert-error d-none mb-4" role="alert">
+                                <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                                Lo sentimos, el servidor no está respondiendo. Intenta de nuevo más tarde.
+                            </div>
                             <div id="formErrorAlert" class="alert alert-danger d-none mb-4" role="alert">
                                 <i class="fas fa-exclamation-circle me-2" aria-hidden="true"></i>
                                 <span id="formErrorMessage">Por favor complete todos los campos correctamente.</span>
@@ -550,7 +554,7 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="nameInput" placeholder="Nombre"
+                                            <input type="text" class="form-control" id="nameInput" name="nameInput" placeholder="Nombre"
                                                 required minlength="3" maxlength="100">
                                             <label for="nameInput">Nombre Completo *</label>
                                             <div class="invalid-feedback">
@@ -560,7 +564,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input type="tel" class="form-control" id="phoneInput"
+                                            <input type="tel" class="form-control" id="phoneInput" name="phoneInput"
                                                 placeholder="Teléfono" required>
                                             <label for="phoneInput">Teléfono *</label>
                                             <div class="invalid-feedback">
@@ -571,7 +575,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="emailInput" placeholder="Email"
+                                        <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="Email"
                                             required>
                                         <label for="emailInput">E-mail *</label>
                                         <div class="invalid-feedback">
@@ -581,17 +585,16 @@
                                 </div>
                                 <div class="mb-3">
                                     <div class="form-floating">
-                                        <select class="form-select" id="motiveSelect" required>
+                                        <select class="form-select" id="motiveSelect" name="motiveSelect" required>
                                             <option value="" selected disabled>Seleccione una opción</option>
-                                            <option value="1">Divorcios</option>
-                                            <option value="2">Alimentos</option>
-                                            <option value="3">Régimen de Comunicación y Cuidado Personal</option>
-                                            <option value="4">Adopciones</option>
-                                            <option value="5">Violencia Familiar</option>
-                                            <option value="6">Juicios de filiación. Cambios de nombre. Impugnación.
-                                            </option>
-                                            <option value="7">Sucesiones y Filiación</option>
-                                            <option value="8">Otro</option>
+                                            <option value="Divorcios">Divorcios</option>
+                                            <option value="Alimentos">Alimentos</option>
+                                            <option value="Régimen de Comunicación y Cuidado Personal">Régimen de Comunicación y Cuidado Personal</option>
+                                            <option value="Adopciones">Adopciones</option>
+                                            <option value="Violencia Familiar">Violencia Familiar</option>
+                                            <option value="Juicios de filiación. Cambios de nombre. Impugnación.">Juicios de filiación. Cambios de nombre. Impugnación.</option>
+                                            <option value="Sucesiones y Filiación">Sucesiones y Filiación</option>
+                                            <option value="Otro">Otro</option>
                                         </select>
                                         <label for="motiveSelect">Motivo de Consulta *</label>
                                         <div class="invalid-feedback">
@@ -601,7 +604,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Mensaje" id="msgInput"
+                                        <textarea class="form-control" placeholder="Mensaje" id="msgInput" name="msgInput"
                                             style="height: 120px" required minlength="10" maxlength="1000"></textarea>
                                         <label for="msgInput">Describa brevemente su situación *</label>
                                         <div class="invalid-feedback">
@@ -859,264 +862,19 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            offset: 100,
-            duration: 800
-        });
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                document.querySelector('.navbar').classList.add('scrolled');
-            } else {
-                document.querySelector('.navbar').classList.remove('scrolled');
-            }
-        });
-
-        // Handle modal buttons with data-bs-dismiss and href
-        document.querySelectorAll('a[data-bs-dismiss="modal"][href^="#"]').forEach(function (btn) {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = this.getAttribute('href');
-                const modal = this.closest('.modal');
-                if (modal) {
-                    const modalInstance = bootstrap.Modal.getInstance(modal);
-                    if (modalInstance) {
-                        modalInstance.hide();
-                    }
-                }
-                // Navigate after modal closes
-                setTimeout(function () {
-                    const element = document.querySelector(target);
-                    if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }, 300);
-            });
-        });
-
-        // Form validation with Bootstrap
-        const contactForm = document.getElementById('contactForm');
-        const formSuccessAlert = document.getElementById('formSuccessAlert');
-        const formErrorAlert = document.getElementById('formErrorAlert');
-        const submitBtn = document.getElementById('submitBtn');
-        const submitText = submitBtn.querySelector('.submit-text');
-        const submitSpinner = submitBtn.querySelector('.spinner-border');
-
-        if (contactForm) {
-            // Real-time validation on input
-            ['nameInput', 'phoneInput', 'emailInput', 'motiveSelect', 'msgInput'].forEach(id => {
-                const field = document.getElementById(id);
-                if (field) {
-                    field.addEventListener('input', function () {
-                        if (this.classList.contains('is-invalid')) {
-                            this.classList.remove('is-invalid');
-                        }
-                        // Hide alerts when user starts typing
-                        formSuccessAlert.classList.add('d-none');
-                        formErrorAlert.classList.add('d-none');
-                    });
-                    field.addEventListener('change', function () {
-                        if (this.classList.contains('is-invalid')) {
-                            this.classList.remove('is-invalid');
-                        }
-                    });
-                }
-            });
-
-            contactForm.addEventListener('submit', function (e) {
-                // HTML5 validation passed
-                e.preventDefault();
-                e.stopPropagation();
-
-                // Hide previous alerts
-                formSuccessAlert.classList.add('d-none');
-                formErrorAlert.classList.add('d-none');
-
-                const name = document.getElementById('nameInput');
-                const phone = document.getElementById('phoneInput');
-                const email = document.getElementById('emailInput');
-                const motive = document.getElementById('motiveSelect');
-                const message = document.getElementById('msgInput');
-
-                let isValid = true;
-
-                // Clear previous validation styles
-                [name, phone, email, motive, message].forEach(field => {
-                    field.classList.remove('is-invalid');
-                });
-
-                // Validate name
-                if (!name.value.trim() || name.value.trim().length < 3) {
-                    name.classList.add('is-invalid');
-                    isValid = false;
-                }
-
-                // Validate phone
-                const phonePattern = /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
-                if (!phone.value.trim() || !phonePattern.test(phone.value.trim())) {
-                    phone.classList.add('is-invalid');
-                    isValid = false;
-                }
-
-                // Validate email
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
-                    email.classList.add('is-invalid');
-                    isValid = false;
-                }
-
-                // Validate motive
-                if (!motive.value) {
-                    motive.classList.add('is-invalid');
-                    isValid = false;
-                }
-
-                // Validate message
-                if (!message.value.trim() || message.value.trim().length < 10) {
-                    message.classList.add('is-invalid');
-                    isValid = false;
-                }
-
-                if (!isValid) {
-                    return;
-                }
-
-                // Show loading state
-                submitBtn.disabled = true;
-                submitText.textContent = 'Enviando...';
-                submitSpinner.classList.remove('d-none');
-
-                // Simulate form submission (replace with actual submission logic)
-                setTimeout(function () {
-                    // Reset button state
-                    submitBtn.disabled = false;
-                    submitText.textContent = 'Enviar Consulta';
-                    submitSpinner.classList.add('d-none');
-
-                    // Show success message
-                    formSuccessAlert.classList.remove('d-none');
-
-                    // Reset form
-                    contactForm.reset();
-
-                    // Clear validation classes
-                    [name, phone, email, motive, message].forEach(field => {
-                        field.classList.remove('is-invalid');
-                    });
-
-                    // Scroll to success message
-                    formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 1500);
-            });
-        }
+    <script defer src="js/custom.js"></script>
+    <!-- <script defer src="js/carrousel.js"></script> -->
+    <script defer src="js/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carousel = document.getElementById("multiCarousel");
-            const carouselInner = document.getElementById("carouselInner");
-            const prevBtn = document.getElementById("prevBtn");
-            const nextBtn = document.getElementById("nextBtn");
-            const originalItems = Array.from(document.querySelectorAll(".multi-carousel-item:not(.clone)"));
-            const totalItems = originalItems.length;
-            let itemsPerSlide = 3;
-            let slideBy = 1;
-            function updateConfig() {
-                const width = window.innerWidth;
-                if (width < 768) { itemsPerSlide = 1; } else if (width < 992) { itemsPerSlide = 2; } else { itemsPerSlide = 3; }
-            }
-            function initializeClones() {
-                document.querySelectorAll(".clone").forEach((clone) => clone.remove());
-                const lastClones = originalItems.slice(-itemsPerSlide).map((item) => {
-                    const clone = item.cloneNode(true); clone.classList.add("clone"); return clone;
-                }).reverse();
-                lastClones.forEach((clone) => carouselInner.prepend(clone));
-                const firstClones = originalItems.slice(0, itemsPerSlide).map((item) => {
-                    const clone = item.cloneNode(true); clone.classList.add("clone"); return clone;
-                });
-                firstClones.forEach((clone) => carouselInner.append(clone));
-            }
-            updateConfig();
-            initializeClones();
-            let currentIndex = 0;
-            let position = itemsPerSlide;
-            let isAnimating = false;
-            function updateCarouselPosition(animate = true) {
-                if (animate) { carouselInner.style.transition = "transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)"; }
-                else { carouselInner.style.transition = "none"; }
-                const translateX = (position * -100) / itemsPerSlide;
-                carouselInner.style.transform = `translateX(${translateX}%)`;
-            }
-            updateCarouselPosition(false);
-            carouselInner.addEventListener("transitionend", function () {
-                isAnimating = false;
-                if (position >= totalItems + itemsPerSlide) {
-                    position = itemsPerSlide + (position - (totalItems + itemsPerSlide));
-                    updateCarouselPosition(false);
-                } else if (position < itemsPerSlide) {
-                    position = totalItems + position;
-                    updateCarouselPosition(false);
-                }
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "5JXWTLx2CJrlgjyJR",
             });
-            function next() {
-                if (isAnimating) return;
-                isAnimating = true;
-                position += slideBy;
-                updateCarouselPosition();
-            }
-            function prev() {
-                if (isAnimating) return;
-                isAnimating = true;
-                position -= slideBy;
-                updateCarouselPosition();
-            }
-            nextBtn.addEventListener("click", () => { next(); resetAutoAdvanceTimer(); });
-            prevBtn.addEventListener("click", () => { prev(); resetAutoAdvanceTimer(); });
-            let isDragging = false; let startX = 0; let startPosition = 0;
-            carousel.addEventListener("mousedown", startDrag);
-            carousel.addEventListener("touchstart", startDrag, { passive: true });
-            window.addEventListener("mousemove", drag);
-            window.addEventListener("touchmove", drag, { passive: true });
-            window.addEventListener("mouseup", endDrag);
-            window.addEventListener("touchend", endDrag);
-            function startDrag(e) {
-                if (isAnimating) return;
-                isDragging = true;
-                startX = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
-                startPosition = position;
-                carousel.classList.add("dragging");
-                carouselInner.style.transition = "none";
-            }
-            function drag(e) {
-                if (!isDragging) return;
-                const x = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
-                const dist = (startX - x);
-                const carouselWidth = carousel.offsetWidth;
-                const moveInPercent = (dist / carouselWidth) * itemsPerSlide;
-                const currentTranslate = ((startPosition + moveInPercent) * -100) / itemsPerSlide;
-                carouselInner.style.transform = `translateX(${currentTranslate}%)`;
-            }
-            function endDrag(e) {
-                if (!isDragging) return;
-                isDragging = false;
-                carousel.classList.remove("dragging");
-                const x = e.type?.includes("mouse") ? e.clientX : e.changedTouches[0].clientX;
-                const dist = startX - x;
-                if (dist > 50) { next(); } else if (dist < -50) { prev(); } else { updateCarouselPosition(true); }
-            }
-            let autoAdvanceInterval;
-            function startAutoAdvance() { clearInterval(autoAdvanceInterval); autoAdvanceInterval = setInterval(next, 5000); }
-            function resetAutoAdvanceTimer() { clearInterval(autoAdvanceInterval); startAutoAdvance(); }
-            startAutoAdvance();
-            carousel.addEventListener("mouseenter", () => clearInterval(autoAdvanceInterval));
-            carousel.addEventListener("mouseleave", startAutoAdvance);
-            window.addEventListener("resize", function () {
-                updateConfig(); initializeClones(); position = itemsPerSlide; updateCarouselPosition(false);
-            });
-        });
+        })();
     </script>
+
 </body>
 
 </html>
