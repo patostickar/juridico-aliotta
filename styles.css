@@ -683,6 +683,7 @@ footer .row {
     margin-top: 40px;
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
 }
 
 @media (max-width: 991px) {
@@ -708,8 +709,13 @@ footer .row {
         justify-content: center;
     }
 
-    .footer-services-list li a {
-        justify-content: center;
+    .footer-services {
+        display: none;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
