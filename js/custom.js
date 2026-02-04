@@ -16,8 +16,7 @@ window.addEventListener('scroll', function () {
 // Get Year for Copyright
 document.addEventListener('DOMContentLoaded', function () {
   let d = new Date();
-  let n = d.getFullYear();
-  document.getElementById('year').innerHTML = n;
+    document.getElementById('year').innerHTML = d.getFullYear();
 });
 
 // Parallax effect for hero section
@@ -31,22 +30,23 @@ window.addEventListener('scroll', () => {
 
 // FAQ Accordion Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        question.addEventListener('click', function() {
+    // Reasons Accordion Functionality
+    const reasonItems = document.querySelectorAll('.reason-item');
+
+    reasonItems.forEach(item => {
+        const title = item.querySelector('.reason-title');
+
+        title.addEventListener('click', function() {
             const isActive = item.classList.contains('active');
-            
-            // Close all other FAQ items
-            faqItems.forEach(otherItem => {
+
+            // Close all other reason items
+            reasonItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
-                    otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    otherItem.querySelector('.reason-title').setAttribute('aria-expanded', 'false');
                 }
             });
-            
+
             // Toggle current item
             if (isActive) {
                 item.classList.remove('active');
@@ -56,9 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.setAttribute('aria-expanded', 'true');
             }
         });
-        
+
         // Keyboard accessibility
-        question.addEventListener('keydown', function(e) {
+        title.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 this.click();
