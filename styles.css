@@ -339,6 +339,108 @@ a {
     align-items: center;
 }
 
+/* --- Por Qué Elegirnos Section --- */
+.why-choose-card {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.why-choose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--gold);
+}
+
+.why-choose-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.why-choose-card:hover .why-choose-icon::before {
+    opacity: 1;
+}
+
+.why-choose-icon i {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.why-choose-card:hover .why-choose-icon i {
+    transform: scale(1.1);
+}
+
+.why-choose-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.why-choose-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .why-choose-card {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .why-choose-card {
+        padding: 30px 20px;
+    }
+    
+    .why-choose-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .why-choose-card h4 {
+        font-size: 1rem;
+    }
+    
+    .why-choose-card p {
+        font-size: 0.85rem;
+    }
+}
+
 /* --- Metodologia (Steps) --- */
 .steps-container {
     padding-left: 20px;
