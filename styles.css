@@ -225,8 +225,8 @@ a {
     }
 
     .hero .small {
-    font-size: 1rem;
-}
+        font-size: 1rem;
+    }
 }
 
 /* --- Trayectoria & Image Stack --- */
@@ -526,11 +526,197 @@ a {
     color: #999;
 }
 
-/* --- Footer --- */
-.footer-modern {
-    background-color: #05101c;
-    padding: 40px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+/* --- Advanced Footer --- */
+footer .row {
+    justify-content: space-between;
+}
+
+.footer-advanced {
+    background: linear-gradient(135deg, #05101c 0%, #0a1929 50%, #05101c 100%);
+    padding: 60px 0 0 0;
+    border-top: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.footer-brand {
+    padding-right: 20px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.footer-brand:hover .footer-logo {
+    transform: scale(1.05);
+}
+
+.footer-section {
+    height: 100%;
+}
+
+.footer-title {
+    color: white;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact-list li {
+    margin-bottom: 12px;
+}
+
+.footer-contact-list li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.footer-contact-list li a:hover {
+    color: white;
+}
+
+.footer-contact-list li a i {
+    color: var(--gold);
+    margin-right: 12px;
+    margin-top: 3px;
+    min-width: 16px;
+}
+
+.footer-contact-list li a span {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.btn-whatsapp-footer {
+    background: linear-gradient(135deg, #25d366 0%, #1faa52 100%);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-footer:hover {
+    background: linear-gradient(135deg, #1faa52 0%, #25d366 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+    color: white;
+}
+
+.footer-services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-services-list li {
+    margin-bottom: 10px;
+}
+
+.footer-services-list li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-services-list li a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.service-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-services-list li a:hover .service-dot {
+    transform: scale(1.5);
+    background-color: white;
+}
+
+
+.footer-quick-contact {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer-phone {
+    color: var(--gold);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-phone:hover {
+    color: white;
+}
+
+.footer-copyright {
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 991px) {
+    .footer-advanced {
+        padding: 40px 0 0 0;
+    }
+
+    .footer-brand {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .footer-brand .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-contact-list li a {
+        justify-content: center;
+    }
+
+    .footer-services-list li a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-title {
+        font-size: 1.1rem;
+    }
 }
 
 /* --- Floating Button --- */
