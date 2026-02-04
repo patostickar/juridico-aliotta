@@ -28,3 +28,42 @@ window.addEventListener('scroll', () => {
         hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
     }
 });
+
+// FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Reasons Accordion Functionality
+    const reasonItems = document.querySelectorAll('.reason-item');
+
+    reasonItems.forEach(item => {
+        const title = item.querySelector('.reason-title');
+
+        title.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+
+            // Close all other reason items
+            reasonItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.reason-title').setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+                this.setAttribute('aria-expanded', 'false');
+            } else {
+                item.classList.add('active');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Keyboard accessibility
+        title.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+});
