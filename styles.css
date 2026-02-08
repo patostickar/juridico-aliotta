@@ -478,14 +478,6 @@ a {
     color: white;
 }
 
-.multi-carousel-control-prev {
-    left: 0px;
-}
-
-.multi-carousel-control-next {
-    right: 0px;
-}
-
 /* --- Contact Section --- */
 .contact-info-card {
     margin-top: 20px;
@@ -558,7 +550,6 @@ footer .row {
 
 .footer-title {
     color: white;
-    font-family: var(--font-serif);
     font-weight: 700;
     font-size: 1.25rem;
     margin-bottom: 20px;
