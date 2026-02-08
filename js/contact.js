@@ -23,6 +23,7 @@ document.querySelectorAll('a[data-bs-dismiss="modal"][href^="#"]').forEach(funct
 const contactForm = document.getElementById('contactForm');
 const formSuccessAlert = document.getElementById('formSuccessAlert');
 const formErrorAlert = document.getElementById('formErrorAlert');
+const formValidationAlert = document.getElementById('formValidationAlert');
 const submitBtn = document.getElementById('submitBtn');
 const submitText = submitBtn.querySelector('.submit-text');
 const submitSpinner = submitBtn.querySelector('.spinner-border');
@@ -36,9 +37,9 @@ if (contactForm) {
                 if (this.classList.contains('is-invalid')) {
                     this.classList.remove('is-invalid');
                 }
-                // Hide alerts when user starts typing
+                // Hide alerts when the user starts typing
                 formSuccessAlert.classList.add('d-none');
-                formErrorAlert.classList.add('d-none');
+                formValidationAlert.classList.add('d-none');
             });
             field.addEventListener('change', function () {
                 if (this.classList.contains('is-invalid')) {
@@ -112,13 +113,13 @@ if (contactForm) {
         submitSpinner.classList.remove('d-none');
 
         emailjs.sendForm('service_qy4tioo', 'contact_form', '#contactForm').then(
-            (response) => {
+            () => {
                 // Reset button state
                 submitBtn.disabled = false;
                 submitText.textContent = 'Enviar Consulta';
                 submitSpinner.classList.add('d-none');
 
-                // Show success message
+                // Show a success message
                 formSuccessAlert.classList.remove('d-none');
 
                 // Reset form
