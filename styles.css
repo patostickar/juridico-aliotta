@@ -623,11 +623,11 @@ a {
     .cta-option {
         margin-bottom: 30px;
     }
-    
+
     .emergency-bar {
         text-align: center;
     }
-    
+
     .emergency-bar .col-md-4 {
         text-align: center !important;
         margin-top: 20px;
@@ -638,31 +638,31 @@ a {
     .cta-option {
         padding: 30px 20px;
     }
-    
+
     .cta-icon {
         width: 60px;
         height: 60px;
         font-size: 1.5rem;
     }
-    
+
     .cta-option h4 {
         font-size: 1.1rem;
     }
-    
+
     .emergency-bar {
         padding: 20px;
     }
-    
+
     .emergency-pulse {
         width: 40px;
         height: 40px;
         font-size: 1rem;
     }
-    
+
     .emergency-bar h5 {
         font-size: 1.1rem;
     }
-    
+
     .emergency-bar p {
         font-size: 0.85rem;
     }
